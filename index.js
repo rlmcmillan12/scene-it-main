@@ -19,7 +19,9 @@ function renderMovies(movies) {
 // renderMovies(movieData)
 const myForm = document.querySelector('#search-form');
 myForm.addEventListener('submit', function (e) {
-    preventDefault(e);
+    e.preventDefault();
+    const searchString = document.querySelector('.search-input').value
+
     renderMovies(movieData)
     console.log(movieData)
 })
